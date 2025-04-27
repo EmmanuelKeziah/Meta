@@ -26,7 +26,7 @@
         </main>
         <div class="headerMiddle">
             <nav class="nav-border">Explore Meta</nav>
-            <nav>Support</nav>
+            <nav class="support">Support</nav>
             <div class="headerEnd">
                 <div class="parcel">
                     <img src="./Assets/Images/parcel.png" alt="parcel-icon-image">
@@ -41,7 +41,8 @@
 
     <!-- Main Section -->
     <section class="heroMain">
-        <video autoplay muted loop playsinline class="heroMain-vid" src="./Assets/Videos/intro-vid.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline class="heroMain-vid">
+            <source src="./Assets/Videos/intro-vid.mp4" type="video/mp4">
         </video>
         <div class="play">
             <img src="./Assets/Images/play.png" alt="play-icon-image">
@@ -65,14 +66,16 @@
             <div class="display">
                 <div class="display-1">
                     <img src="./Assets/Images/footballers-jubilating.jpg" alt="football-club">
-                    <div class="card-notes">
-                        <h3>
-                            How Sevilla Football Club uses Llama and IBM watsonx to scout players
-                        </h3>
-                        <p>
-                            <span class="arrow">&rarr;</span>
-                            Read more
-                        </p>
+                    <div class="display-1">
+                        <div class="card-notes">
+                            <h3>
+                                How Sevilla Football Club uses Llama and IBM watsonx to scout players
+                            </h3>
+                            <p>
+                                <span class="arrow">&rarr;</span>
+                                Read more
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="display-2">
@@ -109,10 +112,12 @@
             <div class="cardContent-1">
                 <div class="imgCard">
                     <img src="./Assets/Images/ray-bans.jpg" alt="dark-man-on-ray-bans">
+
+                    <div class="imgCard-1">
+                        <img src="./Assets/Images/glasses.jpg" alt="ray-bans-sunglasses">
+                    </div>
                 </div>
-                <div class="imgCard-1">
-                    <img src="./Assets/Images/glasses.jpg" alt="ray-bans-sunglasses">
-                </div>
+                
                 <div class="cardNotes">
                     <h3>Ray-Ban Meta AI glasses</h3>
                     <p>Capture, share and stay in the moment, completely hands-free</p>
@@ -120,13 +125,15 @@
                 </div>
             </div>
 
-            <div class="cardContent-2">
+            <div class="cardContent-1">
                 <div class="imgCard">
                     <img src="./Assets/Images/african-american-woman-experiencing-vr-simulation.jpg" alt="VR-device">
+
+                    <div class="imgCard-1">
+                        <img src="./Assets/Images/VR-Tech.png" alt="VR-tech-device">
+                    </div>
                 </div>
-                <div class="imgCard-1">
-                    <img src="./Assets/Images/VR-Tech.png" alt="VR-tech-device">
-                </div>
+                
                 <div class="cardNotes extra">
                     <h3>Meta Quest 3S</h3>
                     <p>Dive into the wonder of mixed reality with the new Meta Quest 3S.</p>
@@ -137,9 +144,10 @@
     </section>
 
     <section class="hero-4">
+        <h2>Connect in new ways with our products</h2>
         <div class="center">
             <button class="button">Explore our technologies</button>
-            <h4><span>&rarr;</span>Go to Help Centre</h4>
+            <h4 class="btn"><span>&rarr;</span>Go to Help Centre</h4>
         </div>
         <video src="./Assets/Videos/hero-vid.mp4" controls></video>
     </section>

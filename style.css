@@ -8,11 +8,23 @@ body{
     font-family: lato;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 66px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
     background-color: #FEFDFE;
 
     img{
@@ -42,11 +54,14 @@ header{
         border: 1px dotted red;
     }
 }
+.headerLogo, .headerStart, .headerMiddle, .headerEnd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .headerLogo{
-    display: flex;
-    margin-left: 32px;
-    gap: 2px;
+    gap: 5px;
     
     img{
         width: 30px;
@@ -54,6 +69,7 @@ header{
     }
     
     .sideMenu{
+        width: 100%;
         display: none;
     }
 
@@ -69,7 +85,9 @@ header{
 }
 
 .headerStart{
-    display: flex;
+    nav{
+        align-items: center;
+    }
     
     nav{
         margin: 0 10px;
@@ -77,16 +95,16 @@ header{
 }
 
 .headerMiddle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-width: 320px;
+
+    nav{
+        justify-content: center;
+        align-items: center;
+    }
     
 }
 
 .headerEnd{
-    display: flex;
-    align-items: center;
     gap: 5px;
 
     img{
@@ -130,26 +148,27 @@ header{
     cursor: pointer;
     background-color: #E2E3E4;
 }
-.heroMain{
+
+.heroMain {
     position: relative;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-}
 
-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
+    video {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
 
-.play{
-    img{
-        width: 100px;
-        height: 80px;
-        position: absolute;
-        bottom: 35px;
-        right: 40px;
+    .play{
+        img{
+            width: 60px;
+            height: auto;
+            position: absolute;
+            bottom: 35px;
+            right: 40px;
+        }
     }
 }
 
@@ -170,11 +189,11 @@ video {
         font-weight: 600;
         text-align: center;
     }
-}
+} 
 
 section.hero-2 {
-    height: 100vh;
-    padding: 20px;
+    height: auto;
+    padding: 0 20px;
     margin: 0 auto;
     width: 100%;
     display: grid;
@@ -185,10 +204,12 @@ section.hero-2 {
         justify-content: center;
         align-items: center; 
         gap: 10px;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
 
         h2 {
             font-size: 3rem;
+            margin-top: 20px;
+            text-align: center;
             color: #1C2B33;
         }
 
@@ -202,7 +223,6 @@ section.hero-2 {
     .display {
         display: flex;
         gap: 1rem;
-        background-color: white;
         max-width: 80%;
         margin: 0 auto;
         text-align: left;
@@ -222,9 +242,9 @@ section.hero-2 {
         display: inline-block;
         justify-content: center;
         align-items: center;
-        width: 30px;
-        height: 30px;
-        color: #1C2B33;
+        max-width: 30px;
+        max-height: 30px;
+        color: rgb(117, 115, 115);
         border: .8px solid lightgray;
         border-radius: 60%;
         padding-left: 5px;
@@ -233,33 +253,43 @@ section.hero-2 {
 }
 
 .hero-3{
-    width: 100%;
+    padding: 50px;
+    justify-content: center;
     margin: 0 auto;
-    margin
     
     .main-card{
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        max-width: 100%;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
-        /* position: relative; */
+        gap: 2rem;
     }
 
     .center{
         margin: 0 auto;
         text-align: center;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 600;
-        max-width: 100%;
+        max-width: 700px;
         padding-top: 50px;
+
+
+        h2{
+            font-size: 2rem;
+            max-width: 520px;
+
+        }
     }
 
-    .imgCard{
-        img{
+    .imgCard {
+        max-width: 580px;
+        aspect-ratio: 1 / 1;
+        overflow: hidden; 
+
+        img {
             width: 100%;
-            max-width: 100%;
-            height: 400px;
+            height: 100%;
             object-fit: cover;
             margin: 0 auto;
             border-radius: 20px;
@@ -277,6 +307,7 @@ section.hero-2 {
             height: auto;
         }
     }
+
     .cardNotes{
         margin-top: 100px;
         display: flex;
@@ -300,9 +331,23 @@ section.hero-2 {
             text-align: center;
             color: #4C5D69;
         }
-
-        
     }
+}
+
+.hero-4{
+    padding: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h2{
+        text-align: center;
+    }
+
+    .btn{
+        padding: 20px;
+        border: 1px solid lightgray;
+    }
+
 }
 
 footer {
@@ -377,473 +422,203 @@ footer {
         height: 100%;
         min-height: 100vh;
     }
-}
+} 
 
 
 
 /* Media Query 300px */
 
-@media (max-width: 300px) {
-    .heroContent {
-        h2 {
-            text-align: center;
-            top: 20px;
-            width: 290px;
-            right: 10px;
-            margin-bottom: 10px;
-            margin: 0 auto;
-        }
-    }
-
-    .play {
-        img {
-            width: 30px;
-            height: auto;
-            bottom: 70px;
-            right: 30px;
-        }
-    }
-}
-/* Media Query 300px */
-
-@media (min-width: 300px) and (max-width: 475px) {
-    .hero-3 {
+@media (min-width: 300px) and (max-width: 1280px) {
+    header {
         margin: 0 auto;
+        padding: 0 20px;
+        min-width: 300px;
 
-        .center {
-            font-size: 1.2rem;
-            width: 100%;
-            padding-bottom: 20px;
-        }
-
-        .main-card {
+        .headerLogo {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
             gap: 10px;
-
-            .imgCard{
+    
+            .sideMenu {
                 width: 100%;
-                margin: 0 auto;
-                img{
-                    width: 100%;
-                    height: auto;
-                    border-top-left-radius: 0;
-                    border-top-right-radius: 0;
-                    max-width: clamp(200px, 90vw, 400px);
-                      
-                }
-            }
-
-            .imgCard-1{
-                img{
-                    width:100%; 
-                    height: auto;
-                    max-width: clamp(100px, 60vw, 200px);
-                }
-            }
-
-            .cardNotes{
-                h3{
-                    margin-top: -60px;
-                    width: 100%;
-                    max-width: 180px;
-                }
-
-                p{
-                    margin-bottom: 10px;
-                }
-            }
-            .extra{
-                h3{
-                    margin-top: -100px;
-                }
-
-                p{
-                    width: 100%;
-                    max-width: 200px;
-                    margin-bottom: 5px;
-                }
-            }
-        }
-
-        .center{
-            margin: 30px auto;
-            font-size: 3rem;
-            font-weight: 600;
-            width: 100%;
-            max-width: 200px;
-            color: #1C2B33;
-        }
-    }
-}
-
-/* Media Query 375px */
-@media (max-width: 375px) {
-    .hero-3{
-        .imgCard{
-            img{
-                width: 100%;
-                max-width: 250px;
-                height: auto;
-            }
-
-        }
-        .imgCard-1{
-            img{
-                width:100%;
-                max-width: 100px;
-            }
-        }
-    }
-}
-/* Media Query 375px */
-
-
-/* Media Query 750px */
-@media (max-width: 750px){
-    .hero-3{
-        /* padding: 20px; */
-
-     .center {
-            font-size: 1.5rem;
-            width: 100%;
-            padding: 10px 0;
-            text-align: center;
-        }
-        
-        .main-card {
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-
-            img{
-                width: 90%;
-                height: auto;
-                object-fit: cover;
-            }
-
-        }
-    }
-
-}
-/* Media Query 750px */
-
-/* Media Query 768px */
-@media (max-width:768px){
-    .hero-3 {
-        margin: 0 auto;
-        width: 100%;
-
-        .main-card{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            width: 100%;
-        }
-
-        .imgCard{
-            width: 100%;
-            img{
-                width: 100%;
-                max-width: 100%;
-                height: 400px;
-                object-fit: cover;
-                margin: 0 auto;
-                border-radius: 20px;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
+                max-width: 40px;
                 display: block;
             }
         }
-        .imgCard-1{
-            img{
-                width:100%;
-                max-width: 300px;
-
-            }
-        }
-        .cardNotes{
-            margin-top: 80px;
-            gap: 10px;
-            margin-bottom: 30px;
-
-            h3{
-                font-size: 1.5rem;
-                font-weight: 400;
-                color: #1C2B33;
-            }
-
-            p{
-                color: #4C5D69;
-                width: 100%;
-                text-align: center;
-            }
-
-            .button{
-                width: auto;
-                font-size: 18px;
-            }
-        }
     
-    }
-
-    footer{
-        flex-direction: column;
-
-        
-
-        
-        .content{
-            background-color: red;
-            margin: auto 0;
-            height: 20vh;
-            img{
-                max-width: 20px;
-                height: auto;
-                margin: 0 auto;
-            }
-        }
-
-        .flex-1{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 100%;
-            max-height: 20vh;;
-            background-color: green;
-        }
-
-        .flex-2{
-            background-color: red;
-            text-align: left;
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-
-        .footer-apps{
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-
-            img{
-                width: 100%;
-                max-width: 40px;
-                height: 100%;
-                max-height: 40px;
-                align-items: center;
-                margin-right: 30px;
-            }
-        }
-
-        .footer-grids{
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-
-/* Media Query 768px */
-
-/* Media Query 800px */
-@media (max-width: 800px) { 
-    header{
-        width: 100%;
-    }
-
-    .headerLogo{
-        display: flex;
-        gap: 10px;
-
-        .sideMenu{
-            width: 40px;
-            display: block;
-        }
-    }
-
-    .headerStart, .headerMiddle{
-        display: none;
-    }
-
-    .headerEnd{
-        display: block;
-        background-color: red;
-        width: 50%;
-        .user img{
+        .headerStart {
             display: none;
         }
-
-        .parcel img{
-            display:block;
+    
+        .headerMiddle { 
+            .nav-border, .support {
+            display: none;
         }
-    }
-
-    h2{
-        max-width: 250px;
-    }
-
-    .play{
-        img{
-            width: 45px;
-            height: auto;
-            right: 50px;
+    
+            .headerEnd {
+                .parcel {
+                    display: block;
+                    padding-right: 50px;
+                }
+    
+                .user {
+                    display: none;
+                }
+            }
         }
     }
 }
-/* Media Query 750px */
 
+@media (min-width: 300px) and (max-width: 478px) {
+    .heroMain {
 
-/* min-max 300px-1023px */
+        .play{
+            img {
+                width: 40px;
+                height: auto;
+                bottom: 90px;
+            }
+        }
 
-@media (min-width: 300px) and (max-width: 1023px) {
-    section.hero-2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        overflow-x: hidden;
-        padding: 20px;
+        .heroContent{
+            h2{
+                font-size: 1.5rem;
+                line-height: 1.2;
+            }
+        }
     }
-  
-    .top-content {
-        max-width: 300px;
-        margin: 0 auto;
-        gap: 10px;
-        padding: 10px 20px;
 
-        h2{
-            line-height: .9;
+    section.hero-2{
+        height: auto;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .top-content {
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+        }
+
+        .display {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            height: 250px;
+            width: 100%;
+            min-height: 250px;
+            margin: 0 auto;
+            justify-content: center;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+
+            .display-1, .display-2, .display-3{
+                scroll-snap-align: start; 
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 766px) {
+    .hero-3{
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 150px 50px;
+        background-color: red;
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .center{
+            font-size: 16px;
+            max-width: 300px;
+        }
+    }
+}
+
+@media (min-width: 479px) and (max-width: 1024px) {
+
+    .section.hero-2{
+        height: auto;
+    }
+
+    .display {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px 40px; 
+            width: 100%;
+            margin: 0 auto;
+        }
+      
+      .display::-webkit-scrollbar {
+        height: 6px;
+      }
+      
+      .display::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 3px;
+      }
+      
+      .display img {
+        flex: 0 0 auto; 
+        width: 250px;
+        height: 200px;
+        border-radius: 20px;
+        scroll-snap-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 1400px) {
+    header{
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .headerLogo,.headerStart, .headerMiddle, .headerEnd{
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
             text-align: center;
         }
-        
-        button{
-            max-width: 200px; 
-            padding: 0;
-            color: #1C2B33;
-            border: 0.7px solid #B5B9BE;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-    }
-  
-    .display {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      padding: 20px 40px; 
-      width: 100%;
-    }
-  
-    .display::-webkit-scrollbar {
-      height: 6px;
-    }
-  
-    .display::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 3px;
-    }
-  
-    .display img {
-      flex: 0 0 auto; 
-      width: 250px;
-      height: 200px;
-      border-radius: 20px;
-      scroll-snap-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .hero-3{
-        .main-card{
-            margin: 0 auto;
-            
-            /* width: 100%; */
-        }
-        /* display: block; */
     }
 }
-/* min-max 300px-1023px */
 
-/* Media Query 2000px */
-@media (min-width: 2000px) {
-
-    .hero-2{
-        max-height:50vh
+@media (max-width: 2560px) {
+    h2{
+        font-size: 2rem;
+        line-height: 1.5;
+        max-width: 1080px;
     }
 
-    .top-content{
-        padding: 30px 0;
-    }
-
-    .display{
+    .hero-2 .display{
+        display: flex;
+        max-width: 1300px;
+        margin: 0 auto;
+        gap: 50px;
+        height: 100%;
         width: 100%;
         justify-content: center;
-        margin: 0 auto;
+        align-items: center;
 
         h3{
-            font-size: 2rem;
-            padding-top: 10px;
+            font-size: 24px;
+            width: 300px;
+            padding: 10px
         }
 
         p{
-            font-size: 2rem;
-            padding-top: 10px;
-        }
-
-        .card-notes{
-            .arrow{
-                width: 50px;
-                height: auto;
-                color: #1C2B33;
-                border: 1px solid lightgray;
-                border-radius: auto;
-            }
+            font-size: 24px;
+            padding: 10px;
+            justify-content: center;
         }
     }
 
-    .hero-3{
-        padding-top: 0;
-        width: 100%;
-        margin: 0 auto;
-        /* flex-wrap: nowrap; */
-
-        .center{
-            font-size: 3rem;
-            min-width: 600px;
-            margin-bottom: 30px;
-        }
-
-        .main-card{
-            display: flex;
-            gap:30px;
-        }
-
-        .imgCard{
-            img{
-                width: 100%;
-                max-width: 700px;
-                height: 500px;
-                /* flex-wrap: nowrap; */
-            }
-        }
-
-        .imgCard-1{
-            img{
-                max-width: 300px;
-            }
-        }
-    }
+    /* .hero-3{
+         do the glasses sizes ,
+    } */
 }
-/* Media Query 2000px */
-
-
