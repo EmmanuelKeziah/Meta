@@ -350,6 +350,68 @@ section.hero-2 {
 
 }
 
+#hero-5 {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    gap: 20px;
+    /* align-items: center; */
+
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+        color: #1C2B33;
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: 600;
+        color: #1C2B33;
+    }
+
+    p {
+        font-size: 20px;
+        color: #37444B;
+        max-width: 1000px;
+        line-height: 1.5;
+    }
+
+    .hero-5-left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+
+        .button {
+            padding: 10px;
+            font-size: 17px;
+        }
+        
+    }
+
+}
+
+.hero-5-right {
+    img {
+        max-width: 100px;
+        border-radius: 10px;
+        margin: 10px 0;
+        height: auto;
+    }
+
+    .flex-right {
+        background-color: #F8F9FB;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
 footer {
     min-height: 100vh;
     display: flex;
@@ -426,51 +488,8 @@ footer {
 
 
 
-/* Media Query 300px */
-
-@media (min-width: 300px) and (max-width: 1280px) {
-    header {
-        margin: 0 auto;
-        padding: 0 20px;
-        min-width: 300px;
-
-        .headerLogo {
-            display: flex;
-            gap: 10px;
-    
-            .sideMenu {
-                width: 100%;
-                max-width: 40px;
-                display: block;
-            }
-        }
-    
-        .headerStart {
-            display: none;
-        }
-    
-        .headerMiddle { 
-            .nav-border, .support {
-            display: none;
-        }
-    
-            .headerEnd {
-                .parcel {
-                    display: block;
-                    padding-right: 50px;
-                }
-    
-                .user {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
 @media (min-width: 300px) and (max-width: 478px) {
     .heroMain {
-
         .play{
             img {
                 width: 40px;
@@ -514,56 +533,112 @@ footer {
             .display-1, .display-2, .display-3{
                 scroll-snap-align: start; 
             }
-            
         }
     }
 }
 
-@media (min-width: 300px) and (max-width: 766px) {
-    .hero-3{
-        margin: 0 auto;
-        max-width: 100%;
-        padding: 150px 50px;
-        background-color: red;
+@media (min-width: 300px) and (max-width: 768px) {
+    #hero-5 {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
 
+        p{
+            font-size: 18px;
+            line-height: 1;
+        }
 
-        .center{
-            font-size: 16px;
-            max-width: 300px;
+       h4 {
+            font-size: 20px;
+            line-height: 1;
+            padding: 5px 0;
+        }
+
+        h2 {
+            font-size: 30px;
+            line-height: 1;
+            padding: 5px 0;
+        }
+
+        .hero-5-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            width: 700px;
+        }
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 1280px) {
+    header {
+        margin: 0 auto;
+        padding: 0 20px;
+        min-width: 300px;
+
+        .headerLogo {
+            display: flex;
+            gap: 10px;
+
+            .sideMenu {
+                width: 100%;
+                max-width: 40px;
+                display: block;
+            }
+        }
+
+        .headerStart {
+            display: none;
+        }
+
+        .headerMiddle { 
+            .nav-border, .support {
+                display: none;
+            }
+
+            .headerEnd {
+                .parcel {
+                    display: block;
+                    padding-right: 50px;
+                }
+
+                .user {
+                    display: none;
+                }
+            }
         }
     }
 }
 
 @media (min-width: 479px) and (max-width: 1024px) {
-
-    .section.hero-2{
+    .section.hero-2 {
         height: auto;
     }
 
     .display {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            padding: 20px 40px; 
-            width: 100%;
-            margin: 0 auto;
-        }
-      
-      .display::-webkit-scrollbar {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 40px; 
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .display::-webkit-scrollbar {
         height: 6px;
-      }
-      
-      .display::-webkit-scrollbar-thumb {
+    }
+
+    .display::-webkit-scrollbar-thumb {
         background-color: #ccc;
         border-radius: 3px;
-      }
-      
-      .display img {
+    }
+
+    .display img {
         flex: 0 0 auto; 
         width: 250px;
         height: 200px;
@@ -574,12 +649,12 @@ footer {
 }
 
 @media (max-width: 1400px) {
-    header{
+    header {
         max-width: 1300px;
         margin: 0 auto;
         padding: 0 20px;
 
-        .headerLogo,.headerStart, .headerMiddle, .headerEnd{
+        .headerLogo, .headerStart, .headerMiddle, .headerEnd {
             justify-content: center;
             align-items: center;
             margin: 0 auto;
@@ -589,13 +664,13 @@ footer {
 }
 
 @media (max-width: 2560px) {
-    h2{
+    h2 {
         font-size: 2rem;
         line-height: 1.5;
         max-width: 1080px;
     }
 
-    .hero-2 .display{
+    .hero-2 .display {
         display: flex;
         max-width: 1300px;
         margin: 0 auto;
@@ -605,20 +680,18 @@ footer {
         justify-content: center;
         align-items: center;
 
-        h3{
+        h3 {
             font-size: 24px;
             width: 300px;
-            padding: 10px
+            padding: 10px;
         }
 
-        p{
+        p {
             font-size: 24px;
             padding: 10px;
             justify-content: center;
         }
     }
-
-    /* .hero-3{
-         do the glasses sizes ,
-    } */
 }
+
+
