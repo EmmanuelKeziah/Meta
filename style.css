@@ -568,6 +568,22 @@ footer {
     }
 } 
 
+.footer-disclaimer {
+    border-top: 3px solid gray; 
+    max-width: 1300px;
+    margin: 0 auto;
+
+    p{
+        font-size: 18px;
+        color: gray;
+        text-align: left;
+        margin-top: 20px;
+        text-transform: capitalize;
+        font-weight: bolder;
+    }
+    
+}
+
 
 
 @media (min-width: 300px) and (max-width: 478px) {
